@@ -14,9 +14,14 @@ $aModule = [
     'author'        => 'Vaterno',
     'blocks' => [
         [
-            'template' => 'layout/base.tpl',
-            'block' => 'installmentplan_banner',
-            'file' => 'src/views/blocks/installmentplan_banner.tpl'
-        ]
-    ]
+            'template' => 'page/details/inc/productmain.tpl',
+            'block' => 'details_productmain_productlinks',
+            'file' => 'src/views/blocks/page/details/installmentplan_banner.tpl',
+        ],
+        [
+            'template' => 'article_main.tpl',
+            'block' => 'admin_article_main_form',
+            'file' => 'src/views/admin/blocks/installmentplan_fields.tpl',
+        ],
+    ],
 ];
