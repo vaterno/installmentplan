@@ -27,7 +27,7 @@ $aModule = [
             'file' => 'src/views/admin/blocks/installmentplan_fields.tpl',
         ],
     ],
-    'extens' => [
+    'extend' => [
         ViewConfig::class => InstallmentplanViewConfig::class,
     ],
 ];
