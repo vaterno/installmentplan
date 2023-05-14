@@ -1,8 +1,5 @@
 <?php
 
-use OxidEsales\Eshop\Core\ViewConfig;
-use Vaterno\Installmentplan\Core\ViewConfig as InstallmentplanViewConfig;
-
 $sMetadataVersion = '1.0';
 
 $aModule = [
@@ -27,7 +24,5 @@ $aModule = [
             'file' => 'src/views/admin/blocks/installmentplan_fields.tpl',
         ],
     ],
-    'extend' => [
-        ViewConfig::class => InstallmentplanViewConfig::class,
-    ],
+    'extend' => [],
 ];

@@ -1,9 +1,7 @@
-[{if true}]
+[{if $oViewConf->isModuleActive('installmentplan')}]
     [{oxstyle include=$oViewConf->getModuleUrl('installmentplan','out/src/css/styles.css')}]
     [{oxstyle include=$oViewConf->getModuleUrl('installmentplan','out/src/css/easy-popup.css')}]
     [{oxscript include=$oViewConf->getModuleUrl('installmentplan','out/src/js/easy-popup.min.js')}]
-
-    [{$oViewConf->asd()}]
 
     <div class="installmentplanBanner">
         <a href="#installmentplanBanner__banner">
