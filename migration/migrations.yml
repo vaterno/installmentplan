@@ -1,0 +1,4 @@
+name: Installment plan
+migrations_namespace: Vaterno\Installmentplan\Migrations
+table_name: oxmigrations_installmentplan
+migrations_directory: data
