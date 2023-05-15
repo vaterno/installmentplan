@@ -1,6 +1,8 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace OxidEsales\PayPalModule\Migrations;
+declare(strict_types=1);
+
+namespace Vaterno\Installmentplan\Migrations;
 
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
