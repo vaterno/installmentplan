@@ -1,5 +1,7 @@
 [{$smarty.block.parent}]
 
+[{$oViewConf->asd}]
+
 <tr>
     <td class="edittext">
         [{oxmultilang ident="SHOP_MODULE_installmentplan_prepayment_amount"}]
@@ -17,6 +19,3 @@
         <input type="text" class="editinput" size="32" maxlength="[{$edit->oxarticles__oxnumberinstallmentmonths->fldmax_length}]" name="editval[oxarticles__oxnumberinstallmentmonths]" value="[{$edit->oxarticles__oxnumberinstallmentmonths->value}]">
     </td>
 </tr>
-
-
-
