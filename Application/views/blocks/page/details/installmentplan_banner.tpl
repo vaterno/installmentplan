@@ -1,6 +1,7 @@
 [{if $oViewConf->isModuleActive('installmentplan') &&
-!empty($oDetailsProduct->oxarticles__oxnumberinstallmentmonths->value) &&
-!empty($oDetailsProduct->oxarticles__oxprepaymentamount->value)}]
+$oDetailsProduct->getPrice() &&
+$oDetailsProduct->oxarticles__oxnumberinstallmentmonths->value &&
+$oDetailsProduct->oxarticles__oxprepaymentamount->value}]
     [{oxstyle include=$oViewConf->getModuleUrl('installmentplan','out/src/css/styles.css')}]
     [{oxstyle include=$oViewConf->getModuleUrl('installmentplan','out/src/css/easy-popup.css')}]
     [{oxscript include=$oViewConf->getModuleUrl('installmentplan','out/src/js/easy-popup.min.js')}]
@@ -16,17 +17,17 @@
 
         <div class="installmentplanBannerModal__textRow">
             <p class="installmentplanBannerModal__textRowLeft">Warenwert</p>
-            <p class="installmentplanBannerModal__textRowRight">[{$oDetailsProduct->oxarticles__oxprice->value}] [{$currency->sign}]</p>
+            <p class="installmentplanBannerModal__textRowRight">[{oxprice price=$oDetailsProduct->oxarticles__oxprice->value currency=$currency}]</p>
         </div>
 
         <div class="installmentplanBannerModal__textRow">
             <p class="installmentplanBannerModal__textRowLeft">Anzahlung</p>
-            <p class="installmentplanBannerModal__textRowRight">[{$oDetailsProduct->oxarticles__oxprepaymentamount->value}] [{$currency->sign}]</p>
+            <p class="installmentplanBannerModal__textRowRight">[{oxprice price=$oDetailsProduct->oxarticles__oxprepaymentamount->value currency=$currency}]</p>
         </div>
 
         <div class="installmentplanBannerModal__monthly">
             <div class="installmentplanBannerModal__textRow">
-                <p class="installmentplanBannerModal__textRowLeft">[{$oViewConf->getMonthlyPrice($oDetailsProduct, $oPrice)}] [{$currency->sign}]/Monat</p>
+                <p class="installmentplanBannerModal__textRowLeft">[{oxprice price=$oViewConf->getMonthlyPrice($oDetailsProduct, $oPrice) currency=$currency}]/Monat</p>
                 <p class="installmentplanBannerModal__textRowRight">[{$oDetailsProduct->oxarticles__oxnumberinstallmentmonths->value}] Raten</p>
             </div>
 
